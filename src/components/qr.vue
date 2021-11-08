@@ -1,5 +1,4 @@
 <template>
-    <h1> QrScanner </h1>
     <div class="flex h-screen">
         <div class="qr m-auto">
         <qrcode-stream :camera="camera" @decode="onDecode" @init="onInit">
@@ -99,6 +98,7 @@ export default {
 .qr{
   width: 50%;
   height: 50%;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }

@@ -71,10 +71,11 @@ export default {
   }
 .modal__dialog {
     position: relative;
-    width: 400px;
+    width: 350px;
+    height: 600px;
     background-color: #ffffff;
     border-radius: 5px;
-    margin: 150px auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
     z-index: 2;
@@ -88,7 +89,6 @@ export default {
     background-color: white;
     margin: 0;
     display: flex;
-    margin-left: 320px;
   }
 .modal__header {
     height: 30px;

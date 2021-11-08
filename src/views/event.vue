@@ -1,6 +1,8 @@
 <template>
   <div class="event">
-    <h2>Masukkan kode</h2>
+    <img src="../assets/qr-code.png" alt="">
+    <p>Masukkan Code</p>
+    <p id="desc">Klik tombol dibawah ini untuk input code</p>
     <button class="input" @click="$refs.modalName.openModal()">Input Code</button>
 
      <modal ref="modalName">
@@ -8,13 +10,13 @@
       </template>
 
       <template v-slot:body>
-        <h3>Input Code dibawah ini</h3>
-        <input v-model="message" placeholder="Masukkan Kode">
+        <h3>Masukkan Code</h3>
+        <input class="msg" v-model="message" placeholder="Ketik kode di sini">
       </template>
 
       <template v-slot:footer>
         <div>
-          <button class="input" @click="$refs.modalName.closeModal()">Input Code</button>
+          <button class="input input-ok" @click="$refs.modalName.closeModal()">Input Code</button>
         </div>
       </template>
     </modal>
@@ -37,9 +39,20 @@ export default {
   overflow: hidden;
 }
 
-h2{
-  margin-top: 75px;
-  font-size: 2rem;
+img{
+  margin-top: 50px;
+}
+
+p{
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#desc{
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 button{
@@ -53,6 +66,24 @@ button{
   background-color: green;
   color: white;
   border-radius: 5px;
-  margin: 0;
 }
+
+.input-ok{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  width: 310px;
+}
+
+h3{
+  color: #42b983;
+}
+
+.msg{
+  margin-top: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
 </style>
